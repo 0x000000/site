@@ -244,6 +244,16 @@ var Doc = {
 		gradient.addColorStop(1, 'rgba(255,1,136,0)');
 
 		context.set('fillStyle', gradient).fillAll();
+	},
+
+	Context2d_createPattern: function(context) {
+		var img = new Image();
+		img.src = 'images/wallpaper.png';
+
+		img.onload = function(){
+			context.fillStyle = context.createPattern(img, 'repeat');
+			context.fillRect(5, 5, 140, 140);
+		}
 	}
 
 

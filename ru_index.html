@@ -449,6 +449,26 @@
 
 
         <h3>createPattern</h3>
+        <p>С помощью этой функции можно замостить холст выбраными элементами: изображением (img), другим холстом (canvas) или видео (video).
+            Возвращает объект <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#canvaspattern">CanvasPattern</a>,
+            который можно использовать, к примеру, в качестве стиля заливки холста.</p>
+        <p class="signature">createPattern(pattern:Image) : CanvasPattern</p>
+        <p class="signature">createPattern(pattern:Canvas) : CanvasPattern</p>
+        <p class="signature">createPattern(pattern:Video) : CanvasPattern</p>
+        <p class="signature">createPattern(pattern:Image, repetition:String) : CanvasPattern</p>
+        <p class="signature">createPattern(pattern:Canvas, repetition:String) : CanvasPattern</p>
+        <p class="signature">createPattern(pattern:Video, repetition:String) : CanvasPattern</p>
+        <p><b>createPattern</b> принимает на вход аргумент <b>pattern</b>, который будет повторен бесконечное количество
+            раз в заданном направлении. Аргумент <b>repetition</b> может принимать значения:
+        </p>
+        <ul>
+            <li><b>repeat</b>  — повторять узор во всех направлениях;</li>
+            <li><b>repeat-x</b>  — повторять узор только по горизонтали;</li>
+            <li><b>repeat-y</b>  — повторять узор только по вертикали;</li>
+            <li><b>no-repeat</b> — без повторов.</li>
+        </ul>
+        <p>Если <b>repetition</b> пустой или null, используется значение по-умолчанию <b>repeat</b>.</p>
+        <div class="sample" id="Context2d_createPattern"></div>
 
         <h3 id="libcanvas_core_context2d_curve_to">curveTo </h3>
 
